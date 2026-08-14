@@ -1,0 +1,5 @@
+# captured requests, written at runtime
+webhook.jsonl
+
+# compiled binary
+/webhook
