@@ -1,4 +1,4 @@
-module webhook
+module github.com/davishieh0/webhook
 
 go 1.25.12
 

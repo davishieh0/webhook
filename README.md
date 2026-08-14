@@ -6,9 +6,15 @@ depender de serviço público nem de limite de requisições.
 
 ## Rodar
 
+Sem Go instalado (troque `linux-amd64` por `darwin-arm64` no Mac):
+
 ```bash
-./dev
+curl -sL https://github.com/davishieh0/webhook/releases/latest/download/webhook-linux-amd64 -o webhook && chmod +x webhook && ./webhook
 ```
+
+Com Go: `go install github.com/davishieh0/webhook@latest && webhook`.
+
+Ou, dentro do repo, `./dev`.
 
 Aponte o webhook para `http://<seu-ip>:8889/qualquer/coisa` (qualquer path,
 qualquer método) e navegue pelas telas.
