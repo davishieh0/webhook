@@ -1,0 +1,94 @@
+[
+  {
+    "method": "GET",
+    "path": "/meta/*/message_templates",
+    "status": 200,
+    "body": {
+      "data": [
+        {
+          "name": "request_contact_info_test_2",
+          "id": "1011946298460002",
+          "status": "APPROVED",
+          "category": "MARKETING",
+          "language": "pt_BR",
+          "components": [
+            {
+              "type": "BODY",
+              "text": "Marketing test"
+            }
+          ]
+        },
+        {
+          "name": "request_contact_info_test",
+          "id": "1007046905231160",
+          "status": "APPROVED",
+          "category": "UTILITY",
+          "language": "pt_BR",
+          "components": [
+            {
+              "type": "BODY",
+              "text": "Utility test"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/meta/*/messages",
+    "status": 200,
+    "body": {
+      "messaging_product": "whatsapp",
+      "contacts": [
+        {
+          "input": "5511953440573",
+          "wa_id": "5511953440573"
+        }
+      ],
+      "messages": [
+        {
+          "id": "wamid.TESTE000000000001"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/financis/accounts/*/templates/prices",
+    "status": 200,
+    "body": {
+      "prices": {
+        "MARKETING": 2.0,
+        "UTILITY": 0.5
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/bilhetis/accounts/*/templates/spending",
+    "status": 200,
+    "delayMs": 0,
+    "body": {
+      "spent": {}
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/bilhetis/tickets",
+    "sequence": [
+      {
+        "status": 500,
+        "body": {
+          "error": "boom"
+        }
+      },
+      {
+        "status": 200,
+        "body": {
+          "id": "tkt-000001"
+        }
+      }
+    ]
+  }
+]
